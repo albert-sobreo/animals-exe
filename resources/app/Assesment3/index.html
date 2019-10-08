@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>True or False</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet' href='css/bootstrap.min.css'>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../sweetalert2/dist/sweetalert2.min.css">
+  <script src="../sweetalert2/dist/sweetalert2.all.min.js"></script>
+  <style type="text/css">
+    ::-webkit-scrollbar { 
+    display: none; 
+    }
+    </style>
+</head>
+
+<body>
+<div id="gradient"></div>
+  <br>
+<h2 class="text-center text-success" id="main-header">TRUE or FALSE</h2>
+<br>
+<div class="col-xs-10 col-xs-offset-1 jumbotron">
+  <h1 class="text-center"><span id="counter"></span><br><span class="bg-warning" id="test-word"></span></h1>
+  <img src="" id="test-word">
+  <br><br>
+  <div class="container">
+    <button type="button" class="btn btn-primary btn-lg" id="un-btn">True</button>
+    <button type="button" class="btn btn-primary pull-right btn-lg" id="una-btn">False</button>
+  </div>
+</div>
+
+<br style="clear:both">
+
+<a onclick="exit()" class="float1">
+    <script>
+      function exit(){
+        Swal.fire({
+          title: 'Are you sure?',
+          text: 'You will lose your progress!',
+          type: 'warning',
+          showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Exit'
+        }).then((result) => {
+          if(result.value) {
+            window.location.href = "../assessment.html";
+          }
+        })
+      }	
+    </script>
+<i class="fa fa-chevron-left my-float1" aria-hidden="true" style="font-size:20px"></i>
+</a>
+
+<script> if (typeof module === 'object'){window.module = module; module = undefined;} </script>
+
+  <script src='js/jquery.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+
+  
+
+    <script src="js/index.js"></script>
+
+
+<script> if (window.module) module = window.module; </script>
+
+</body>
+
+</html>

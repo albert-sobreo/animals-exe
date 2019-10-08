@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Drag and Drop activity</title>
+  
+  
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../sweetalert2/dist/sweetalert2.min.css">
+  <script src="../sweetalert2/dist/sweetalert2.all.min.js"></script>  <style type="text/css">
+    ::-webkit-scrollbar { 
+    display: none; 
+    }
+    </style>
+</head>
+
+<body>
+<div id="gradient"></div>
+<div class="container">
+  <div class="card" style=" opacity:0.9;
+  filter: alpha(opacity=50);height: 500px; margin-top: 10%;">
+    <div class="card-header"><h2>Drag the animals describing the sentence.</h2></div>
+    <div class="card-body">
+    	<!--First Drop Target-->
+
+    <div class="row">
+    <div class="col-sm-3">
+    	<div data-drop-target="true" id='howdy'>
+		  <div id="box4" draggable="true" class="box fish"></div>
+		  <div id="box3" draggable="true" class="box bird"></div>
+      <div id="box5" draggable="true" class="box spider"></div>
+		  <div id="box1" draggable="true" class="box dog"></div>
+      <div id="box2" draggable="true" class="box frog"></div>
+	  </div>
+    </div>
+    <div class="col-sm-9">
+    	<div class="row">
+	    	<div class="col-sm-4"><div data-drop-target="true" id="dog-drop"><h1 class="position-fixed" style="margin-top:-50px">I RUN.</h1></div></div>
+	    	<div class="col-sm-4"><div data-drop-target="true" id="frog-drop"><h1 class="position-fixed" style="margin-top:-50px">I HOP.</h1></div></div>
+	    	<div class="col-sm-4"><div data-drop-target="true" id="bird-drop"><h1 class="position-fixed" style="margin-top:-50px">I FLY.</h1></div></div>
+	    	<div class="col-sm-4"><div data-drop-target="true" id="fish-drop"><h1 class="position-fixed" style="margin-top:-50px">I SWIM.</h1></div></div>
+	    	<div class="col-sm-4"><div data-drop-target="true" id="spider-drop"><h1 class="position-fixed" style="margin-top:-50px">I CRAWL.</h1></div></div>
+  		</div>
+    </div>
+  </div>
+
+
+
+	<!--Second Drop Target-->
+	
+    </div> 
+    <!-- add button to check and show the results -->
+      <div class="card-footer">
+        <div class="row">
+          <div class="col-sm-2"><button class="btn btn-large btn-success" onclick="showCorrect()" >Check Answers</button></div>
+          <div id= "feedback-incorrect" class=" center text-center container alert-danger col-sm-9" style="padding-top: 7px; display: none;">You scored <span class="totalCorrect" id="totalCorrect1">…</span> out of 5</div>
+          <div id= "feedback-correct" class=" center text-center container alert-success col-sm-9" style="padding-top: 7px; display: none;">Well done. You scored <span class="totalCorrect" id="totalCorrect2">…</span> out of 5</div>
+        </div>
+      </div>
+    </div>
+</div>
+  	
+<a onclick="exit()" class="float1">
+		<script>
+			function exit(){
+				Swal.fire({
+					title: 'Are you sure?',
+					text: 'You will lose your progress!',
+					type: 'warning',
+					showCancelButton: true,
+					  confirmButtonColor: '#3085d6',
+					  cancelButtonColor: '#d33',
+					  confirmButtonText: 'Exit'
+				}).then((result) => {
+					if(result.value) {
+						window.location.href = "../activity.html";
+					}
+				})
+			}	
+		</script>
+<i class="fa fa-chevron-left my-float1" aria-hidden="true" style="font-size:20px"></i>
+</a>
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

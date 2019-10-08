@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple choice questions with results</title>
+  
+  
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../sweetalert2/dist/sweetalert2.min.css">
+	  <script src="../sweetalert2/dist/sweetalert2.all.min.js"></script><style type="text/css">
+  ::-webkit-scrollbar { 
+  display: none; 
+  }
+  </style>
+</head>
+  
+</head>
+
+<body>
+<div id="gradient"></div>
+<div class="container">
+  <div class="card" style=" opacity:0.9;
+  filter: alpha(opacity=50);">
+    <div class="card-header">
+      <h3>Directions: Read each question carefully. Choose the correct answer.</h3>
+    </div>
+    <div class="card-body">
+      <ul class="quiz">
+  <li>
+    <h4>1. Which of the folliwng animals crawl?</h4>
+    <ul class="choices">
+      <div class="row">
+      <li class="col-sm-2"><label><input type="radio" name="question0" value="A"><span>Bird</span></label></li>
+      <li class="col-sm-2"><label><input type="radio" name="question0" value="B"><span>Fish</span></label></li>
+      </div>
+      <div class="row">
+      <li class="col-sm-2"><label><input type="radio" name="question0" value="C"><span>Dolphin</span></label></li>
+      <li class="col-sm-2"><label><input type="radio" name="question0" value="D"><span>Snail</span></label></li>
+      </div>
+    </ul>
+  </li>
+  <li>
+    <h4>2. Which of the following movements does not make use of feet.</h4>
+    <ul class="choices">
+      <div class="row">
+        <li class="col-sm-2"><label><input type="radio" name="question1" value="A"><span>Soar</span></label></li>
+        <li class="col-sm-2"><label><input type="radio" name="question1" value="B"><span>Run</span></label></li>
+        </div>
+        <div class="row">
+        <li class="col-sm-2"><label><input type="radio" name="question1" value="C"><span>Crawl</span></label></li>
+        <li class="col-sm-2"><label><input type="radio" name="question1" value="D"><span>Walk</span></label></li>
+      </div>
+    </ul>
+  </li>
+  <li>
+    <h4>3. Which of the following animals leap?</h4>
+    <ul class="choices">
+      <div class="row">
+      <li class="col-sm-2"><label><input type="radio" name="question2" value="A"><span>Shark</span></label></li>
+      <li class="col-sm-2"><label><input type="radio" name="question2" value="B"><span>Mosquito</span></label></li>
+      </div>
+      <div class="row">
+      <li class="col-sm-2"><label><input type="radio" name="question2" value="C"><span>Whale</span></label></li>
+      <li class="col-sm-2"><label><input type="radio" name="question2" value="D"><span>Toad</span></label></li>
+      </div>
+    </ul>
+  </li>
+  <li>
+    <h4> 4. What do parts of the butterfly flap to fly in the air?</h4>
+    <ul class="choices">
+      <div class="row">
+      <li class="col-sm-2"><label><input type="radio" name="question3" value="A"><span>Antennae</span></label></li>
+      <li class="col-sm-2"><label><input type="radio" name="question3" value="B"><span>Thorax</span></label></li>
+      </div>
+      <div class="row">
+      <li class="col-sm-2"><label><input type="radio" name="question3" value="C"><span>Wings</span></label></li>
+      <li class="col-sm-2"><label><input type="radio" name="question3" value="D"><span>Head</span></label></li>
+      </div>
+    </ul>
+  </li>
+  <li>
+    <h4> 5. How do birds move in the air?</h4>
+    <ul class="choices">
+      <div class="row">
+      <li class="col-sm-2"><label><input type="radio" name="question4" value="A"><span>They crawl</span></label></li>
+      <li class="col-sm-2"><label><input type="radio" name="question4" value="B"><span>They leap</span></label></li>
+      </div>
+      <div class="row">
+      <li class="col-sm-2"><label><input type="radio" name="question4" value="C"><span>They glide</span></label></li>
+      <li class="col-sm-2"><label><input type="radio" name="question4" value="D"><span>They propel</span></label></li>
+      </div>
+    </ul>
+  </li>
+</ul>
+
+    </div> 
+    <div class="card-footer">
+      <button class="view-results" onclick="returnScore()">View Results</button>
+<span id="myresults" class="my-results">My results will appear here</span>
+    </div>
+  </div>
+</div>
+
+  
+<a onclick="exit()" class="float1">
+    <script>
+      function exit(){
+        Swal.fire({
+          title: 'Are you sure?',
+          text: 'You will lose your progress!',
+          type: 'warning',
+          showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Exit'
+        }).then((result) => {
+          if(result.value) {
+            window.location.href = "../enrichment.html";
+          }
+        })
+      }	
+    </script>
+<i class="fa fa-chevron-left my-float1" aria-hidden="true" style="font-size:20px"></i>
+</a>
+  
+<script> if (typeof module === 'object'){window.module = module; module = undefined;} </script>
+    <script src="js/index.js"></script>
+
+
+<script> if (window.module) module = window.module; </script>
+
+</body>
+
+</html>
