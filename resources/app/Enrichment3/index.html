@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Enrichmenet Activity 3</title>
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="../sweetalert2/dist/sweetalert2.min.css">
+      <script src="../sweetalert2/dist/sweetalert2.all.min.js"></script>
+      <style type="text/css">
+        ::-webkit-scrollbar { 
+        display: none; 
+        }
+        </style>
+</head>
+
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+
+  <html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <body>
+    <div id="gradient"></div>
+    <div id="page">
+      <div id="Message-Container">
+        <div id="message">
+          <h1>Congratulations!</h1>
+          <p>You are done.</p>
+          <p id="moves"></p>
+          <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" />
+        </div>
+      </div>
+      <div id="menu">
+        <div class="custom-select">
+          <select id="diffSelect">
+                    <option value="10">Easy</option>
+                    <option value="15">Medium</option>
+                    <option value="25">Hard</option>
+                    <option value="38">Extreme</option>                                      
+                </select>
+        </div>
+        <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+      </div>
+      <div id="view">
+        <div id="mazeContainer">
+          <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+        </div>
+      </div>
+    </div>
+    <script> if (typeof module === 'object'){window.module = module; module = undefined;} </script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script> -->
+    <script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+  </body>
+</html>
+ <!--  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js'></script> -->
+ <script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+ 
+
+  
+
+    <script  src="js/index.js"></script>
+ <script> if (window.module) module = window.module; </script>
+
+
+ <a onclick="exit()" class="float1">
+    <script>
+      function exit(){
+        Swal.fire({
+          title: 'Are you sure?',
+          text: 'You will lose your progress!',
+          type: 'warning',
+          showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Exit'
+        }).then((result) => {
+          if(result.value) {
+            window.location.href = "../enrichment.html";
+          }
+        })
+      }	
+    </script>
+<i class="fa fa-chevron-left my-float1" aria-hidden="true" style="font-size:20px"></i>
+</a>
+</body>
+
+</html>

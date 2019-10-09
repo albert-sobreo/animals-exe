@@ -1,0 +1,18 @@
+{
+  "name": "Animals",
+  "version": "1.0.0",
+  "description": "Animal movement and their habitat",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Gaylon, Ian",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^6.0.12"
+  },
+  "dependencies": {
+    "electron-packager": "^14.0.6",
+    "sweetalert2": "^8.17.6"
+  }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Select words activity</title>
+  
+  
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="css/style.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link rel="stylesheet" href="../sweetalert2/dist/sweetalert2.min.css">
+	  <script src="../sweetalert2/dist/sweetalert2.all.min.js"></script>
+	  <style type="text/css">
+		::-webkit-scrollbar { 
+		display: none; 
+		}
+		</style>
+</head>
+
+<body>
+	<div id="gradient"></div>
+<section id="dragAndDrop1" class="container screen dragAndDrop">
+<div class="container">
+  <div class="card" style=" opacity:0.9;
+  filter: alpha(opacity=50);">
+    <div class="card-header"><h3>Complete the poem below. Select the missing movements/animals in the blank.</h3></div>
+    <div class="card-body"><div class="wjec-drag-and-drop row">
+				<div class="wjec-drag-and-drop-text col-md-12 text-center">
+					<h2 class="user-answers-header">Your answers</h2>
+					<p style="font-size: 35px;">Snake <span class="wjec-drop">Slither</span><select class="dropdown-1 dropdown">
+					</select> <br></p>
+
+					<p style="font-size: 35px;">and <span class="wjec-drop">Cats</span><select class="dropdown-2 dropdown">
+					</select>creep <br></p><p style="font-size: 35px;"> Spider <span class="wjec-drop">Spin</span><select class="dropdown-3 dropdown">
+					</select> <br></p>
+
+					<p style="font-size: 35px;">and Leopoards <span class="wjec-drop">Leap</span><select class="dropdown-4 dropdown">
+					</select>  .<br></p>
+
+					<p style="font-size: 35px;"> <span class="wjec-drop">Turtles</span><select class="dropdown-5 dropdown">
+					</select> trudge .</p><br>
+
+					<p style="font-size: 35px;">and Bunnies<span class="wjec-drop">Bounce</span><select class="dropdown-6 dropdown">
+					</select> .</p>
+
+				</div>
+				<div class="correct-answers col-md-6">
+					<h2 class="correct-answers-header">Correct answers</h2>
+					<div class="correct-answers-content">
+            		<p>Snake <span class="correct-text">Slither </span></p> <br>
+					<p>and <span class="correct-text">Cats </span>Creep <br>
+					<p>Spider <span class="correct-text">Spin </span></p>
+					<p>and Leopoards <span class="correct-text">Leap</span></p><br>
+					<p><span class="correct-text">Turtles</span> Trudge</p><br>
+					<p>and Bunnies <span class="correct-text">Bounce</span></p>
+          </div>
+				</div>
+			</div>
+
+						<!-- note to dev add distractors here -->
+</div> 
+    <div class="card-footer">
+    	<div class="row">
+				<div class="col-md-12 text-center feedback">
+					<div class="feedback-incorrect alert alert-danger">You scored <span class='totalCorrect'>…</span> out of <span class="dragTotal"></span>.</div>
+					<div class="feedback-allcorrect alert alert-success">Well done. You scored <span class='totalCorrect'>…</span> out of <span class="dragTotal"></span>.</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<button class="checkAnswerBtn btn btn-primary btn-lg">Check</button>
+				</div>
+			</div>
+    </div>
+  </div>
+</div>
+  
+			
+			
+		</section>
+<script> if (typeof module === 'object'){window.module = module; module = undefined;} </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+  
+
+    <script src="js/index.js"></script>
+
+<script> if (window.module) module = window.module; </script>
+
+<a onclick="exit()" class="float1">
+<script>
+	function exit(){
+		Swal.fire({
+			title: 'Are you sure?',
+			text: 'You will lose your progress!',
+			type: 'warning',
+			showCancelButton: true,
+  			confirmButtonColor: '#3085d6',
+  			cancelButtonColor: '#d33',
+  			confirmButtonText: 'Exit'
+		}).then((result) => {
+			if(result.value) {
+				window.location.href = "../activity.html";
+			}
+		})
+	}	
+</script>
+<i class="fa fa-chevron-left my-float1" aria-hidden="true" style="font-size:20px"></i>
+</a>
+</body>
+
+</html>

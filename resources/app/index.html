@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Animal World</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  
+  <!-- Custom styles for this template -->
+  <link href="css/coming-soon.min.css" rel="stylesheet">
+  <style type="text/css">
+    html {
+    overflow:hidden;
+    }
+    </style>
+</head>
+
+<body>
+  <div style="float: right; margin-top: 5px; margin-right: 5px">
+    <button class="btn btn-warning btn-sm" id="min-btn" style="background-color: #ffbc37; border-radius: 50px">&#8212;</button>
+    <button class="btn btn-danger btn-sm" id="close-btn" style="background-color: #fc5e55; border-radius: 50px">&#10761;</button>
+  </div>
+  <script>
+      const remote = require('electron').remote;
+       document.getElementById("min-btn").addEventListener("click", function (e) {
+            var window = remote.getCurrentWindow();
+            window.minimize(); 
+       });
+
+       document.getElementById("close-btn").addEventListener("click", function (e) {
+            var window = remote.getCurrentWindow();
+            window.close();
+       }); 
+     </script>
+  <div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="z-index: -1">
+    <source src="mp4/bg2.mp4" type="video/mp4">
+  </video>
+  </div>
+  
+
+  <div class="masthead">
+    
+  
+    <div class="masthead-bg"></div>
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-12 my-auto">
+          <div class="masthead-content text-white py-5 py-md-0">
+            <img src="1.png" class="rounded-circle" height="100" width="100">
+            <img src="2.png" class="rounded-circle" height="100" width="130">
+            <img src="3.png" class="rounded-circle" height="100" width="100">
+            <h1 class="mb-3" style="font-family: Verdana, Geneva, Tahoma, sans-serif">Body Movements of Animals</h1>
+            <p class="mb-5" style="font-family: Verdana, Geneva, Tahoma, sans-serif">in Their Habitat</p>
+            <div class="input-group input-group-newsletter">
+              <form action="page1.html" class="input-group input-group-newsletter">
+                <input type="text" class="form-control" placeholder="Enter Player's Name" name="username" required>
+                <div class="input-group-append">
+                  <!-- <button class="btn btn-secondary" type="button" onclick="window.location.href='page1.html'">Proceed</button> -->
+                  <input type="submit" class="btn btn-secondary" placeholder="Proceed">
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLongTitle">GUIDE CARD</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>This material intends to teach you to compare the different body movements of animals in a particular habitat.</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" >Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script> if (typeof module === 'object'){window.module = module; module = undefined;} </script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/coming-soon.min.js"></script>
+  <script> if (window.module) module = window.module; </script>
+
+</body>
+
+</html>
