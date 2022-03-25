@@ -9,7 +9,7 @@
   "author": "Gaylon, Ian",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^6.0.12"
+    "electron": "^13.6.6"
   },
   "dependencies": {
     "electron-packager": "^14.0.6",
